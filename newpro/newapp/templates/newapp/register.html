@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends "newapp/base.html" %}
+{% block body_block %}
+<div class="container">
+  <div class="jumbotron jumbnew">
+    <h1>Welcome To The Registration Page !</h1>
+
+  </div>
+
+</div>
+{% if registered %}
+<div class="">
+  <h1>Thanks For Registration! </h1>
+  <h1>Login to visit your profile!</h1>
+</div>
+
+{% else %}
+<div class="jumbotron jumbnew">
+  <h1>Register Here ! By filling out the form .</h1>
+</div>
+
+<div class="container">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{user_form.as_p}}
+    {{profile_form.as_p}}
+    <input type="submit" class="btn btn-primary" name="Register">
+
+  </form>
+
+</div>
+{% endif %}
+
+{% endblock %}

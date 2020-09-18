@@ -1,0 +1,26 @@
+h1{
+  color: purple;
+  z-index: 1;
+  font-weight: 900;
+}
+.bgsite{
+  z-index: -1;
+  opacity: 0.7;
+  position: absolute;
+}
+
+li{
+  font-weight: 700;
+}
+div{
+  font-weight: 700;
+}
+label{
+  font-weight: bold;
+}
+p{
+  font-weight: bold;
+}
+.jumbnew{
+  opacity: 0.5;
+}
